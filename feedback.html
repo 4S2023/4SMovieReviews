@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<title>4S Feedback Form</title>
+	<meta charset="UTF-8">
+	<meta name = "author" content = "Sherman Tan">
+	<meta name = "description" content = "4S Feedback Form">
+	<meta name = "keywords" content = "4S, Feedback, Form">
+	<link rel = "stylesheet" type = "text/css" href = "style.css">
+</head>
+<body>
+<header>
+<nav>
+<a href = "index.html"><img src = "images/4s_logo.png" alt = "4S Logo"></a>
+<!-- This information is taken from https://z-upload.facebook.com/4SRealEstate/about/?ref=page_internal -->
+	<ul>
+		<li class = "dbutton"><a href = "index.html" target = "new-window">HOME</a></li>
+		<li>
+		<div class = "dropdown">
+		<p class = "dbutton"><a href = "action.html">ACTION</a></p>
+			<div class = "d-content">
+				<a href = "furious7.html">Furious 7</a>
+				<a href = "john_wick.html">John Wick</a>
+				<a href = "top_gun.html">Top Gun: Maverick</a>
+			</div>
+		</div>
+		</li>
+		<li>
+		<div class = "dropdown">
+		<p class = "dbutton"><a href = "comedy.html">COMEDY</a></p>
+			<div class = "d-content">
+				<a href = "D&D.html">Dungeons &amp; Dragons</a>
+				<a href = "wolf.html">The Wolf of Wall Street</a>
+				<a href = "guardians.html">Guardians of the Galaxy</a>
+			</div>
+		</div>
+		</li>
+		<li>
+		<div class = "dropdown">
+		<p class = "dbutton"><a href = "horror.html">HORROR</a></p>
+			<div class = "d-content">
+				<a href = "lights_out.html">Lights Out</a>
+				<a href = "incantation.html">Incantation</a>
+				<a href = "conjuring2.html">The Conjuring 2</a>
+			</div>
+		</div>
+		</li>
+		<li class = "dbutton"><a href = "feedback.html" target = "new-window">FEEDBACK</a></li>
+	</ul>
+</nav>
+</header>
+<article>
+	<h1>Feedback Form</h1>
+	<p>Feel free to fill in this form to give feedback to us regarding your experience with our website.</p>
+	<form name = "feedback" method = "post" action = "mailto:4Smoviereview@gmail.com" enctype = "text/plain">
+		<fieldset>
+			<legend>Personal Information</legend>
+		<table>
+			<tr>
+				<td><label for = "email">Email: </label></td>
+				<td class = "feedback"><input type = "email" name = "email" id = "email" size = "40"></td>
+			</tr>
+			<tr>
+				<td><label for = "movies-watched">Which of the movies have you watched before?</label></td>
+				<td class = "feedback">
+					<select name = "movies-watched" id = "movies-watched" size = "12" multiple = "multiple">
+						<optgroup label = "Action">
+							<option value = "furious7">Fast and Furious 7</option>
+							<option value = "john_wick">John Wick</option>
+							<option value = "top_gun">Top Gun: Maverick</option>
+						</optgroup>
+						<optgroup label = "Comedy">
+							<option value = "D&D">Dungeons &amp; Dragons</option>
+							<option value = "wolf">The Wolf of Wall Street</option>
+							<option value = "guardians">Guardians of the Galaxy</option>
+							</optgroup>
+						<optgroup label = "Horror">
+							<option value = "lights_out">Lights Out</option>
+							<option value = "incantation">Incantation</option>
+							<option value = "conjuring2">The Conjuring 2</option>
+						</optgroup>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Which movie genres are you interested in?</td>
+				<td class = "PI-feedback">
+					<input type = "checkbox" name = "action" id = "action"><label for = "action" class = "checkbox">Action</label>
+					<input type = "checkbox" name = "comedy" id = "comedy"><label for = "comedy" class = "checkbox">Comedy</label>
+					<input type = "checkbox" name = "horror" id = "horror"><label for = "horror" class = "checkbox">Horror</label>
+				</td>
+			</tr>
+		</table>
+		</fieldset>
+		<fieldset id = "e-form">
+			<legend>Your Experience With Our Website</legend>
+		<table>
+			<tr>
+				<td><label for = "rate">What is your overall experience using our website.(1 = bad experience, 5 = excellent experience)</label></td>
+				<td class = "E-feedback"><input type = "range" name = "rate" id = "rate" min = "1" max = "5" value = "3"></td>
+			</tr>
+			<tr>
+				<td>Would you share the website to others?</td>
+				<td>
+					<input type = "radio" name = "share" id = "Yes" value = "Yes"><label for = "Yes">Yes</label>
+					<input type = "radio" name = "share" id = "No" value = "No"><label for = "No">No</label>
+				</td>
+			</tr>
+			<tr>
+			<td><label for = "feedback">What should we do to improve your experience with our website?</label></td>
+			<td><textarea name = "feedback" id = "feedback" rows = "3" cols = "40"></textarea></td>
+			</tr>
+		</table>
+		</fieldset>
+		<input type = "submit" value = "Submit Form">
+		<input type = "reset" value = "Clear Form">
+	</form>
+</article>
+<footer>
+	<address><strong>&copy; <a href = "4S.html" target = "new-window">4S</a> | Last Updated: 17 May 2023</strong></address>
+</footer>
+</body>
+</html>

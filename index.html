@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<title>4S Movie Review</title>
+	<meta charset="UTF-8">
+	<meta name = "author" content = "Sherman Tan">
+	<meta name = "description" content = "4S Movie Review">
+	<meta name = "keywords" content = "4S, Movie, Review">
+	<link rel = "stylesheet" type = "text/css" href = "style.css">
+</head>
+<body>
+<header>
+<nav>
+<a href = "index.html"><img src = "images/4s_logo.png" alt = "4S Logo"></a>
+<!-- This information is taken from https://z-upload.facebook.com/4SRealEstate/about/?ref=page_internal -->
+	<ul>
+		<li class = "dbutton"><a href = "index.html" target = "new-window">HOME</a></li>
+		<li>
+		<div class = "dropdown">
+		<p class = "dbutton"><a href = "action.html">ACTION</a></p>
+			<div class = "d-content">
+				<a href = "furious7.html">Furious 7</a>
+				<a href = "john_wick.html">John Wick</a>
+				<a href = "top_gun.html">Top Gun: Maverick</a>
+			</div>
+		</div>
+		</li>
+		<li>
+		<div class = "dropdown">
+		<p class = "dbutton"><a href = "comedy.html">COMEDY</a></p>
+			<div class = "d-content">
+				<a href = "D&D.html">Dungeons &amp; Dragons</a>
+				<a href = "wolf.html">The Wolf of Wall Street</a>
+				<a href = "guardians.html">Guardians of the Galaxy</a>
+			</div>
+		</div>
+		</li>
+		<li>
+		<div class = "dropdown">
+		<p class = "dbutton"><a href = "horror.html">HORROR</a></p>
+			<div class = "d-content">
+				<a href = "lights_out.html">Lights Out</a>
+				<a href = "incantation.html">Incantation</a>
+				<a href = "conjuring2.html">The Conjuring 2</a>
+			</div>
+		</div>
+		</li>
+		<li class = "dbutton"><a href = "feedback.html" target = "new-window">FEEDBACK</a></li>
+	</ul>
+</nav>
+</header>
+<article>
+<!--Slideshow-->
+<div class="slideshow-container">
+	<div class="mySlides fade"><a href = "top_gun.html">
+		<div class="numbertext">1 / 3</div>
+		<img src = "images/TG.jpg" alt = "Top Gun image">
+		<!-- This information is taken from https://www.guysgab.com/wp-content/uploads/2019/07/TG_Maverick.jpg -->
+		<div class="text">Top Gun: Maverick Review</div>
+	</a></div>
+	<div class="mySlides fade"><a href = "wolf.html">
+		<div class="numbertext">2 / 3</div>
+		<img src = "images/wows.jpg" alt = "Wolf of Wall Street image">
+		<!-- This information is taken from https://metadata-static.plex.tv/c/gracenote/ca0efa08436624689d0ee3fcf47efce9.jpg -->
+		<div class="text">The Wolf of Wall Street Review</div>
+	</a></div>
+	<div class="mySlides fade"><a href = "incantation.html">
+		<div class="numbertext">3 / 3</div>
+		<img src = "images/incant.jpg" alt = "Incantation image">
+		<!-- This information is taken from https://img.herstory.co.id/articles/archive_20220714/film-horor-20220714-071140.jpg -->
+		<div class = "text">Incantation Review</div>
+	</a></div>
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+<div style="text-align:center">
+	<span class="dot" onclick="currentSlide(1)"></span>
+	<span class="dot" onclick="currentSlide(2)"></span>
+	<span class="dot" onclick="currentSlide(3)"></span>
+</div>
+	<h1>4S Movie Reviews</h1>
+	<p>4S Movie Review provides information about 3 movies in 3 different genres that includes action, comedy and horror. You can find the ratings, description and also the description about the movie such as the actors, the duration of the movie and more in this website.</p>
+	<h2 class = "movie-genre">Movie Genres</h2>
+	<ol>	
+		<li><a href = "action.html"><div class = "cont">
+			<img class = "h-gen" src = "images/action.jpg" alt = "Action Image">
+			<!-- This information is taken from https://www.premiumbeat.com/blog/5-essential-elements-of-action-movies/ -->
+			<div class = "h-over">
+				<div class = "title">Action</div>
+				<p class = "i-desc">
+					Click to see Action Movies.
+				</p>
+			</div>
+		</div></a></li>
+		<li><a href = "comedy.html"><div class = "cont">
+			<img class = "h-gen" src = "images/comedy.jpg" alt = "Comedy Image">
+			<!-- This information is taken from https://www.premiumbeat.com/blog/genre-breakdown-comedy-film/ -->
+			<div class = "h-over">
+				<div class = "title">Comedy</div>
+				<p class = "i-desc">
+					Click to see Comedy Movies.
+				</p>
+			</div>
+		</div></a></li>
+		<li><a href = "horror.html"><div class = "cont">
+			<img class = "h-gen" src = "images/horror.jpg" alt = "Horror Image">
+			<!-- This information is taken from https://pshoffman.com/writing-resources/resources-for-horror-fiction-writers/ -->
+			<div class = "h-over">
+				<div class = "title">Horror</div>
+				<p class = "i-desc">
+					Click to see Horror Movies.
+				</p>
+			</div>
+		</div></a></li>
+	</ol>
+	<div id = "jav-cont">
+	<button id = "jav-click" onclick="myFunction()">Click to see disclaimer</button>
+	</div>
+	<p id = "disclaimer">This website is created for education and non-commercial use only. It is an assignment for completion of unit, FST10011 Web and Cloud Technologies for Foundation course from Swinburne University of Technology Sarawak Campus.</p>
+</article>
+<footer>
+	<address><strong>&copy; <a href = "4S.html" target = "new-window">4S</a> | Last Updated: 17 May 2023</strong></address>
+</footer>
+<!--Greet the user with alert and hide or show click the disclaimer button to see disclaimer-->
+<script src = "java.js"></script>
+</body>
+</html>

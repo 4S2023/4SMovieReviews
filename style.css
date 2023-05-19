@@ -1,0 +1,441 @@
+/*whole website style*/
+*{
+	color: white;
+	font-family: helvetica, sans-serif;
+	padding: 0;
+}
+/*background colour style*/
+body{
+	background-color: black;
+	clear: left;
+}
+/*nav style*/
+nav{
+	text-align: center;
+	text-align: right;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 55px;
+	z-index: 100;
+}
+nav img {
+	width: 8%;
+	float: left;
+	margin-left: 2%;
+	position: relative;
+	z-index: 100;
+}
+nav ul{
+	margin: 0;
+	padding: 0;
+	background: #5A5A5A;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+nav ul li{
+	display: inline-block;
+	margin-right: 7%; 
+	position: relative;
+}
+/*Dropdown menu*/
+.dbutton{
+	background: transparent;
+	color: white;
+	padding: 10px 0;
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.dropdown{
+	position: relative;
+	display: inline-block;
+}
+.d-content{
+	display: none;
+	position: absolute;
+	background-color: #5A5A5A;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	border: 1px;
+	top: 100%;
+}
+.d-content a{
+	color: white;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+.d-content a:hover{
+	background: transparent;
+}
+.dropdown:hover .d-content{
+	display: block;
+}
+.dbutton:hover{
+	color: yellow;
+}
+/*make the line effect below the nav*/
+nav ul li::after{
+	content: "";
+	height: 3px;
+	width: 0;
+	background: yellow;
+	position: absolute;
+	left: 0;
+	bottom: -1px;
+	transition: 0.5s;
+}
+nav ul li:hover::after{
+	width: 100%;
+}
+a{
+	text-decoration: none;
+}
+nav ul li a:hover{
+	color: yellow;
+	font-weight: bold;
+}
+nav ul li a:active{
+	color: red;
+}
+/*article style*/
+h1{
+	padding-top: 2%;
+	clear: both;
+	margin-top: 10%;
+}
+article h2 a:hover{
+	color: yellow;
+	font-weight: bold;
+}
+article h2 a:active{
+	color: red;
+}
+article ul{
+	text-align: center;
+}
+article ul li{
+	display: inline;
+	padding: 0 5%;
+}
+article ul a:hover{
+	color: yellow;
+	font-weight: bold;
+}
+article ul a:active{
+	color: red;
+}
+.movie.genre{
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+/*Make text float up when hover on image*/
+.cont{
+	position: relative;
+	width: 30%;
+	float: left;
+	margin-right: 3%;
+	margin-bottom: 3%;
+}
+.h-gen{
+	display: block;
+	width: 100%;
+}
+.h-over{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.6);
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+.h-over > *{
+	transform: translateY(20px);
+	transition: transform 0.5s;
+}
+.h-over:hover{
+	opacity: 1;
+}
+.h-over:hover > *{
+	transform: translateY(0);
+}
+.title{
+	font-size: 2em;
+	font-weight: bold;
+}
+.i-desc{
+	font-size: 1.25em;
+	margin-top: 0.25em;
+}
+/*footer style*/
+footer{
+	clear: both;
+	margin-top: 10px;
+	text-align: center;
+}
+footer a{
+	text-decoration: none;
+}
+footer a:hover{
+	color: yellow;
+	font-weight: bold;
+}
+/*homepage style*/
+ol{
+	list-style-type: none;
+}
+.genres{
+	font-weight: bold;
+	font-size: 20px;
+	background-color: #5A5A5A;
+	margin: 0 2%;
+	padding: 5px 30px;
+}
+#jav-cont{
+	text-align: center;
+	margin-top: 8%;
+}
+#jav-click{
+	color: white;
+	font-weight: bold;
+	background-color: #5A5A5A;
+	padding: 7px;
+	font-size: 15px;
+}
+#jav-click:hover{
+	color: yellow;
+	font-weight: bold;
+}
+#jav-click:active{
+	color: red;
+}
+#disclaimer{
+	margin-top: 2%;
+	padding: 0 2%;
+	text-align: center;
+	display: none;
+}
+/*Slideshow*/
+.slideshow-container {
+	max-width: 79%;
+	position: relative;
+	margin: auto;
+}
+.slideshow-container img{
+	width: 100%;
+}
+.mySlides {
+	margin-top: 70px;
+	display: none;
+}
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+.prev:hover, .next:hover {
+	background-color: rgba(0,0,0,0.8);
+}
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+.text {
+	color: #f2f2f2;
+	font-size: 15px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	text-align: center;
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+	background-color: #717171;
+}
+.fade {
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+@keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
+}
+/*Content*/
+.c-table a:hover{
+	color: yellow;
+	font-weight: bold;
+}
+.c-table a:active{
+	color: red;
+}
+article a:hover{
+	color: yellow;
+	font-weight: bold;
+}
+article a:active{
+	color: red;
+}
+article p{
+	clear: both;
+}
+.c-table{
+	margin: 3% 2% 2% 2%;
+	width: 65%;
+	float: left;
+}
+.c-table th{
+	text-align: left;
+	width: 33%;
+}
+.c-table caption{
+	padding-top: 10px;
+	caption-side: bottom;
+}
+.c-table, .c-table td, .c-table th{
+	border: 1px solid white;
+}
+.c-actor, .c-table li{
+	text-align: left;
+	display: block;
+}
+.c-img{
+	margin-top: 3%;
+	width: 25%;
+	float: right;
+	height: 720px;
+}
+.m-act{
+	margin-bottom: 10px;
+}
+.vid{
+	text-align: center;
+}
+iframe{
+	margin-bottom: 30px;
+}
+/*make white bullet points*/
+.c-table li{
+	list-style: none;
+}
+.c-table li::before{
+	content: "\2022";
+	color: white;
+	font-weight: bold;
+	display: inline-block;
+	width: 1em;
+	margin-left: -1em;
+	padding-left: 5px;
+}
+/*Make the ratings stars orange*/
+.checked {
+  color: orange;
+}
+/*Feedback form style*/
+select{
+	width: 50%;
+}
+select optgroup, option{
+	color: black;
+	padding: 2%;
+}
+table th,td{
+	padding: 2%;
+}
+.checkbox{
+	padding-right:10%;
+}
+.PI-feedback{
+	width: 70%;
+}
+.E-feedback{
+	width: 50%;
+}
+textarea{
+	color: black;
+}
+input[type=submit],input[type=reset]{
+	background-color: #5A5A5A;
+	color: white;
+	font-weight: bold;
+	margin: 10px;
+	padding: 5px;
+	border: 1px solid white;
+}
+input[type=submit]:hover,input[type=reset]:hover{
+	background-color: yellow;
+	color: black;
+}
+input, textarea, select{
+	outline: none;
+}
+input:focus, textarea:focus, select:focus{
+	border: 2px solid yellow;
+}
+#e-form{
+	margin: 3% auto;
+}
+/*Group description*/
+.group_pic{
+	width: 120px;
+	height: 120px;
+}
+#group_table{
+	width: 100%;
+	margin: 5% auto;
+	border: 1px solid white;
+}
+#group_table td{
+	border: 1px solid white;
+}
+.number{
+	width: 5%;
+}
+.name{
+	width: 20%;
+}
+.pic{
+	width: 20%;
+	height: 130px;
+}
